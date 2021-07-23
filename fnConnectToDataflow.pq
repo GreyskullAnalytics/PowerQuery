@@ -16,7 +16,7 @@ let
         "you are able to delete and replace dataflows or even decide to point you report at dataflows in a different workspace. You must pass 3 parameters: " & 
         "WORKSPACE is the name of the workspace the dataflow is in, " &
         "DATAFLOW is the name of the dataflow and ENTITY is the specific table within the dataflow you wish to connect to. " &
-        "It's recommended to use a parameterise to to populate the WORKSPACE parameter to allow the PBIX to point at different workspaces " &
+        "It's recommended to use a parameter to populate the WORKSPACE parameter to allow the PBIX to point at different workspaces " &
         "i.e. develop a report pointed to dataflows in a development workspace, and then switch the parameter to point at a production workspace once " &
         "your dataflows and report are production ready."
     ]
