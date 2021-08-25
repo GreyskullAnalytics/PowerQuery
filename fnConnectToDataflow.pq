@@ -2,10 +2,11 @@ let
     fnConnectToDataflow =
         (Workspace as text, Dataflow as text, Entity as text) =>
         let
-            Source = PowerBI.Dataflows(null),
-            Workspace_Name = Source{[workspaceName = Workspace]}[Data],
-            Dataflow_Name = Workspace_Name{[dataflowName = Dataflow]}[Data],
-            Entity_Name = Dataflow_Name{[entity=Entity]}[Data]
+            Source = PowerPlatform.Dataflows(null),
+            Workspaces = Source{[Id="Workspaces"]}[Data],
+            Workspace_Name = Workspaces{[workspaceName= Workspace]}[Data],
+            Dataflow_Name = Workspace_Name{[dataflowName=Dataflow]}[Data],
+            Entity_Name = Dataflow_Name{[entity=Entity,version=""]}[Data]
         in 
             Entity_Name,
     Documentation_Meta = [
